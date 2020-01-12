@@ -3,18 +3,11 @@
   <header class="header-wrapper">
     <nav class='nav-container'>
         <ul class="styled-ul flex-ul">
+        {% for linkItem  in navigation.linkGroup.all() %}
           <li>
-            <a href="#!">Home</a>
+            {{ linkItem.customLink.getLink()}}
           </li>
-          <li>
-            <a href="#!">About</a>
-          </li>
-          <li>
-            <a href="#!">Blog</a>
-          </li>
-          <li>
-            <a href="#!">Contact</a>
-          </li>
+        {% endfor %}
         </ul>
     </nav>
     <main>

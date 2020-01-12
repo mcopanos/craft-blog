@@ -1,27 +1,30 @@
-<section>
-  {# {% for entry in craft.entries.section('blogPosts').limit(9).all() %} #}
-    {# Add card content here #}
-    <div class="blog-card flex-ul">
-      <div class="blog-card__image-wrapper">
-        <img src="https://via.placeholder.com/600x400" alt="" />
+{% extends "index.twig" %}
+
+{% block main %}
+  <section>
+    {# {% for entry in craft.entries.section('blogPosts').limit(9).all() %} #}
+      {# Add card content here #}
+      <div class="blog-card flex-ul">
+        <div class="blog-card__image-wrapper">
+          <img src="https://via.placeholder.com/600x400" alt="" />
+        </div>
+        <div class="blog-card__content-wrapper">
+          <h2>This is a blog post heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Amet porttitor eget dolor morbi non. Etiam erat velit scelerisque in. 
+            Amet volutpat consequat mauris nunc congue nisi. Non pulvinar neque 
+            laoreet suspendisse interdum consectetur libero id faucibus.
+          </p>
+          <span>
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </span>
+        </div>
       </div>
-      <div class="blog-card__content-wrapper">
-        <h2>This is a blog post heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Amet porttitor eget dolor morbi non. Etiam erat velit scelerisque in. 
-          Amet volutpat consequat mauris nunc congue nisi. Non pulvinar neque 
-          laoreet suspendisse interdum consectetur libero id faucibus.
-        </p>
-        <span>
-          <i class="fas fa-arrow-alt-circle-right"></i>
-        </span>
-      </div>
-    </div>
-  
-  {# {% endfor %} #}
-</section>
+    {# {% endfor %} #}
+  </section>
+{% endblock %}
 
 
 

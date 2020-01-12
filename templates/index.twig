@@ -11,10 +11,11 @@
 </head>
 <body>
     {% include 'includes/header.twig' %}
-    
-    {% include "pages/home.twig" %}
+
+    <main role="main">
+        {% block main %}{% endblock %}
+    </main>
 
     {% include 'includes/footer.twig' %}
-
 </body>
 </html>

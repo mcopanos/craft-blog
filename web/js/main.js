@@ -116,8 +116,8 @@ console.log(test);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/michaelcopanos/projects/client-projects/jills-blog/assets/js/main.js */"./assets/js/main.js");
-module.exports = __webpack_require__(/*! /Users/michaelcopanos/projects/client-projects/jills-blog/assets/sass/app.scss */"./assets/sass/app.scss");
+__webpack_require__(/*! /Users/michealcopanos/Desktop/blog/assets/js/main.js */"./assets/js/main.js");
+module.exports = __webpack_require__(/*! /Users/michealcopanos/Desktop/blog/assets/sass/app.scss */"./assets/sass/app.scss");
 
 
 /***/ })

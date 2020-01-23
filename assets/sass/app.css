@@ -1,7 +1,6 @@
 .header-wrapper {
   text-align: center;
 }
-
 .header-wrapper h2 {
   letter-spacing: 1px;
 }
@@ -15,7 +14,6 @@
   margin: 0;
   padding: 0;
 }
-
 .styled-ul li a {
   text-decoration: none;
   padding: 10px 15px;
@@ -36,7 +34,6 @@
   margin: 0;
   padding: 10px 0 0;
 }
-
 .motto-ul li {
   font-size: 18px;
   letter-spacing: 0.75px;
@@ -65,14 +62,12 @@
   border-bottom-left-radius: 5px;
   transition: all 0.1s linear;
 }
-
 .blog-card__image-wrapper img {
   height: 100%;
   width: 600px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
 }
 
@@ -82,15 +77,13 @@
   justify-content: center;
   padding: 0 55px;
 }
-
 .blog-card__content-wrapper p {
   font-size: 1.25em;
   letter-spacing: 1.5px;
 }
 
 .blog-card:hover,
-.blog-card:hover image-wrapper,
-.blog-card:focus,
+.blog-card:hover image-wrapper, .blog-card:focus,
 .blog-card:focus image-wrapper {
   transform: scale(1.03);
   border-top-left-radius: 5px;
@@ -109,3 +102,4 @@ body {
   background-color: #e7f1fa;
 }
 
+/*# sourceMappingURL=app.css.map */

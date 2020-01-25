@@ -1,25 +1,22 @@
 <!DOCTYPE html> 
 <html>
-  <header class="header-wrapper">
-    <nav class='nav-container'>
-        <ul class="styled-ul flex-ul">
-        {% for linkItem  in navigation.linkGroup.all() %}
-          <li>
-            {{ linkItem.customLink.getLink()}}
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="container navbar-brand" href="#">My Unexpected Journey</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {% for linkItem in navigation.linkGroup.all() %}
+          <li class="px-3 nav-item active">
+            {#find out how to add span element to link#}
+            {{ linkItem.customLink.getLink({class: 'nav-link'})}}
+            {# <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> #}
           </li>
         {% endfor %}
-        </ul>
-    </nav>
-    <main>
-      <ul class="motto-ul flex-ul">
-        <li>Live</li>
-        <li>Love</li>
-        <li>Laugh</li>
       </ul>
-      <hr class="custom-line">
-      <div>
-        <img src="https://via.placeholder.com/1500x600" alt"place holder image"/>
-      </div>
-    </main>
-  </header>
+    </div>
+  </div>
+</nav>
 </html>

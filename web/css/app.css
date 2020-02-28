@@ -1,102 +1,113 @@
-.header-wrapper {
+/* Carousel base class */
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.header-wrapper h2 {
-  letter-spacing: 1px;
+.marketing h2 {
+  font-weight: 400;
 }
 
-.nav-container {
-  padding: 20px 0 10px 0;
+.marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
-.styled-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
 }
 
-.styled-ul li a {
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 22px;
+/* Thin out the marketing headings */
+
+.featurette-heading {
   font-weight: 300;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  color: black;
+  line-height: 1;
+  letter-spacing: -0.05rem;
 }
 
-.flex-ul {
-  display: flex;
-  justify-content: center;
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
 }
 
-.motto-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 10px 0 0;
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }
 
-.motto-ul li {
-  font-size: 18px;
-  letter-spacing: 0.75px;
-  list-style-type: none;
-  padding: 0 10px;
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.custom-line {
-  width: 15%;
-  border: 1px solid;
-  border-radius: 5px;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
-.blog-card {
-  max-width: 1200px;
-  max-height: 400px;
-  text-align: center;
-  margin: 50px auto;
-  border-radius: 5px;
-  box-shadow: 0 20px 30px 0 rgba(95, 118, 151, 0.23);
-  transition: all 0.1s linear;
+@media (min-width: 1600px) {
+  .carousel-inner {
+    max-width: 1111px !important;
+    margin: 0 auto;
+  }
 }
 
-.blog-card__image-wrapper {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  transition: all 0.1s linear;
-}
-
-.blog-card__image-wrapper img {
-  height: 100%;
-  width: 600px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
-}
-
-.blog-card__content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 55px;
-  background-color: #fafaf3;
-}
-
-.blog-card__content-wrapper p {
-  font-size: 1.25em;
-  letter-spacing: 1.5px;
-}
-
-.blog-card:hover,
-.blog-card:hover image-wrapper,
-.blog-card:focus,
-.blog-card:focus image-wrapper {
-  transform: scale(1.03);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  cursor: pointer;
+.nav-link:active,
+.nav-link:focus {
+  border-bottom: 2px solid blue;
 }
 
 * {
@@ -104,8 +115,8 @@
 }
 
 body {
-  /* font-family: "Josefin Slab", serif; */
   margin: 0;
   padding: 0;
+  color: #5a5a5a;
 }
 

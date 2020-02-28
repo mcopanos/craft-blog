@@ -1,14 +1,16 @@
-@import 'imports/header.scss';
+@import 'imports/hero-image.scss';
 @import 'imports/home.scss';
+@import 'imports/responsive.scss';
+@import 'imports/nav-bar.scss';
 
 * {
     box-sizing: border-box;
   }
   
   body {
-    /* font-family: "Josefin Slab", serif; */
     margin: 0;
     padding: 0;
+    color: #5a5a5a;
   }
 
   // Set fonts for heading elements git

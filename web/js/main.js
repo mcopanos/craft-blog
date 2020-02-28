@@ -115,8 +115,8 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/michealcopanos/Desktop/blog/assets/js/main.js */"./assets/js/main.js");
-module.exports = __webpack_require__(/*! /Users/michealcopanos/Desktop/blog/assets/sass/app.scss */"./assets/sass/app.scss");
+__webpack_require__(/*! /Users/michealcopanos/projects/client-projects/blog/assets/js/main.js */"./assets/js/main.js");
+module.exports = __webpack_require__(/*! /Users/michealcopanos/projects/client-projects/blog/assets/sass/app.scss */"./assets/sass/app.scss");
 
 
 /***/ })

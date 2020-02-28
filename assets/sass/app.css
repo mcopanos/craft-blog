@@ -92,6 +92,10 @@
     margin: 0 auto;
   }
 }
+.nav-link:active, .nav-link:focus {
+  border-bottom: 2px solid blue;
+}
+
 * {
   box-sizing: border-box;
 }

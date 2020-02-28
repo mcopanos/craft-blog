@@ -6,21 +6,22 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://via.placeholder.com/1500x600" align="middle" alt="">
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-          </div>
-        </div>
+{#        <div class="container">#}
+{#          <div class="carousel-caption text-left">#}
+{#            <h1>Example headline.</h1>#}
+{#            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>#}
+{#            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>#}
+{#          </div>#}
+{#        </div>#}
       </div>
     </div>
     <!-- Main Photo End -->
+
     <!-- Blog Posts -->
     <div class="container marketing">
       <hr class="featurette-divider">
     {# {% for entry in craft.entries.section('blogPosts').limit(9).all() %} #}
-      {% for num in range(1, 2) %}
+      {% for num in range(1, 1) %}
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
@@ -42,11 +43,22 @@
       </div>
       <hr class="featurette-divider">
       {% endfor %}
-
-    {# {% endfor %} #}
     <!-- Blog Posts End -->
+      <!-- Call to action -->
+      <div class="featurette row align-items-center">
+        <div class="col-md-7">
+          <h2 class="header display-4 ml-4">Find more of my posts here...</h2>
+        </div>
+        <div class="col-md-5 mx-auto float-right">
+          <button type="button" class="btn btn-info btn-lg px-5 my-5">Blog Posts <i class="fas fa-arrow-right ml-2"></i></button>
+        </div>
+      </div>
+        <hr class="featurette-divider">
+      </div>
     </div>
   </section>
+
+
 {% endblock %}
 
 

@@ -1,11 +1,10 @@
-const mix = require('laravel-mix');
-
+let mix = require('laravel-mix');
 
 mix.version()
     .disableNotifications()
     .setPublicPath('web')
-    .js('assets/js/main.js', 'web/js/main.js')
-    .sass('assets/sass/app.scss', 'web/css/')
+    .js('assets/js/main.js', 'web/js/')
+    .sass('assets/sass/app.scss', 'web/css/app.css')
     .copyDirectory('assets/css', 'web/css')
     .sourceMaps()
     .browserSync({

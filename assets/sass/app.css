@@ -81,6 +81,11 @@
   user-select: none;
 }
 
+@media (max-width: 420px) {
+  .logo {
+    display: none !important;
+  }
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -92,10 +97,6 @@
     margin: 0 auto;
   }
 }
-.nav-link:active, .nav-link:focus {
-  border-bottom: 2px solid blue;
-}
-
 * {
   box-sizing: border-box;
 }

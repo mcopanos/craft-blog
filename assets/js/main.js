@@ -1,3 +1,9 @@
-const test = "test";
+const hambugerMenu = document.querySelector('#js-mobile-nav');
+const mobileNav = document.querySelector('.collapse');
 
-console.log(test);
+function openMenu() {
+   mobileNav.classList.toggle('collapse');
+}
+
+hambugerMenu.addEventListener('click', openMenu);
+

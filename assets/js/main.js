@@ -1,7 +1,9 @@
-// const navList = document.querySelector('js.nav');
-//
-// navList.addEventListener('click', function() {
-//     alert('I was clicked');
-// });
+const hambugerMenu = document.querySelector('#js-mobile-nav');
+const mobileNav = document.querySelector('.collapse');
 
-console.log('working');
+function openMenu() {
+   mobileNav.classList.toggle('collapse');
+}
+
+hambugerMenu.addEventListener('click', openMenu);
+

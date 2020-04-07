@@ -1,10 +1,10 @@
 {
   "require": {
     "codemonauts/craft-instagram-feed": "^1.0",
-    "craftcms/cms": "3.4.9",
+    "craftcms/cms": "3.4.11",
     "craftcms/contact-form": "2.2.6",
     "craftcms/contact-form-honeypot": "1.0.2",
-    "craftcms/redactor": "2.6.0.1",
+    "craftcms/redactor": "2.6.1",
     "misterbk/mix": "1.5.2",
     "sebastianlenz/linkfield": "1.0.20",
     "vlucas/phpdotenv": "^3.4.0"

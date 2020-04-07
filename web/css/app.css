@@ -94,7 +94,7 @@
 
 @media (max-width: 420px) {
   .logo {
-    display: none !important;
+    font-size: 14px !important;
   }
 }
 
@@ -109,6 +109,10 @@
     max-width: 1111px !important;
     margin: 0 auto;
   }
+}
+
+.custom-hover:hover .custom-hover:focus {
+  color: red !important;
 }
 
 * {

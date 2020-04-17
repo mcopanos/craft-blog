@@ -97,10 +97,6 @@
     margin: 0 auto;
   }
 }
-.custom-hover:hover .custom-hover:focus {
-  color: red !important;
-}
-
 * {
   box-sizing: border-box;
 }

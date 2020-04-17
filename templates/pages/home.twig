@@ -5,7 +5,18 @@
     <!-- Main Photo -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://via.placeholder.com/1500x600" align="middle" alt="">
+        {% set image = entry.previewImage.one() %}
+        {% if image %}
+          {% set options = {
+            mode: 'crop',
+            height: 650,
+            width: 925,
+            quality: 75,
+            position: 'center-center'
+          } %}
+          <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid">
+        {% endif %}
+{#        <img src="https://via.placeholder.com/1500x600" align="middle" alt="">#}
 {#        <div class="container">#}
 {#          <div class="carousel-caption text-left">#}
 {#            <h1>Example headline.</h1>#}
@@ -18,7 +29,6 @@
     <!-- Main Photo End -->
 
     <!-- Blog Posts -->
-
     <div class="container marketing">
       <hr class="featurette-divider">
       {% set latestPost = craft.entries.section('blogPosts').one() %}

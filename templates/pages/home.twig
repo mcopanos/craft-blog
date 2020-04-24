@@ -3,20 +3,18 @@
 {% block main %}
   <section>
     <!-- Main Photo -->
-    <div class="container carousel-inner">
-      <div class="carousel-item active">
-        {% set image = entry.previewImage.one() %}
-        {% if image %}
-          {% set options = {
-            mode: 'crop',
-            height: 550,
-            width: 1100,
-          } %}
-          <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
-        {% else %}
-          <img src="https://via.placeholder.com/1500x600" align="middle" alt="">
-        {% endif %}
-      </div>
+    <div class="container">
+      {% set image = entry.previewImage.one() %}
+      {% if image %}
+        {% set options = {
+          mode: 'crop',
+          height: 550,
+          width: 1100,
+        } %}
+        <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
+      {% else %}
+        <img src="https://via.placeholder.com/1500x600" align="middle" alt="">
+      {% endif %}
     </div>
     <!-- Main Photo End -->
 

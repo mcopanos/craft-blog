@@ -1,29 +1,21 @@
 {% extends "index.twig" %}
 
 {% block main %}
-  <section>
+  <section class="pt-3">
     <!-- Main Photo -->
-    <div class="carousel-inner">
+    <div class="container carousel-inner">
       <div class="carousel-item active">
         {% set image = entry.previewImage.one() %}
         {% if image %}
           {% set options = {
             mode: 'crop',
-            height: 650,
-            width: 925,
-            quality: 75,
-            position: 'center-center'
+            height: 550,
+            width: 1100,
           } %}
-          <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid">
+          <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
+        {% else %}
+          <img src="https://via.placeholder.com/1500x600" align="middle" alt="">
         {% endif %}
-{#        <img src="https://via.placeholder.com/1500x600" align="middle" alt="">#}
-{#        <div class="container">#}
-{#          <div class="carousel-caption text-left">#}
-{#            <h1>Example headline.</h1>#}
-{#            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>#}
-{#            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>#}
-{#          </div>#}
-{#        </div>#}
       </div>
     </div>
     <!-- Main Photo End -->
@@ -36,6 +28,11 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">{{ latestPost.title }}! <span class="text-muted">{{ latestPost.description }}.</span></h2>
           <p class="lead">{{ latestPost.richText|striptags|slice(0,150) }}...</p>
+          <a href="{{ latestPost.url }}">
+            <button type="button" class="btn btn-info btn-lg mt-3">
+              Read More
+            </button>
+          </a>
         </div>
         <div class="col-md-5">
           {% set image = latestPost.previewImage.one() %}
@@ -45,7 +42,7 @@
               height: 500,
               width: 500
             } %}
-            <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top">
+            <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
           {% else %}
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
           {% endif %}
@@ -57,6 +54,11 @@
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading">{{ first.title }}! <span class="text-muted">{{ first.description }}.</span></h2>
           <p class="lead">{{ first.richText|striptags|slice(0,150) }}...</p>
+          <a href="{{ first.url }}">
+            <button type="button" class="btn btn-info btn-lg mt-3">
+              Read More
+            </button>
+          </a>
         </div>
         <div class="col-md-5 order-md-1">
           {% set image = first.previewImage.one() %}
@@ -66,7 +68,7 @@
               height: 500,
               width: 500
             } %}
-            <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top">
+            <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
           {% else %}
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
           {% endif %}
@@ -101,7 +103,7 @@
         {% for item in craft.instagram.getFeed() %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img height="250px" src="{{ item.src }}" alt="instagram photo">
+              <img  src="{{ item.src }}" alt="instagram photo" class="img-fluid" style="max-width: 100%; height: auto">
               <div class="card-body">
                 {% set caption = item.caption %}
                 {% if caption %}

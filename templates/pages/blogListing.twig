@@ -3,25 +3,19 @@
 {% set posts = craft.entries.section('blogPosts').all() %}
 
 {% block main %}
-    <section class="carousel-inner mb-5">
-        <div class="carousel-item active">
+    <section class="container carousel-inner pt-3">
+        <div class="carousel-item active ">
             {% set image = entry.previewImage.one() %}
             {% if image %}
                 {% set options = {
                     mode: 'crop',
-                    height: 675,
-                    width: 925,
-                    quality: 75,
-                    position: 'center-center'
+                    height: 550,
+                    width: 1100,
                 } %}
-                <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid">
+                <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
+             {% else %}
+                <img src="https://via.placeholder.com/1500x600" width="100%" height="100%" alt="">
             {% endif %}
-{#            <img src="https://via.placeholder.com/1500x600" width="100%" height="100%" alt="">#}
-            <div class="container">
-                <div class="carousel-caption text-center">
-                    {# <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> #}
-                </div>
-            </div>
         </div>
     </section>
     <!-- SEARCH BAR -->
@@ -37,30 +31,22 @@
             <div class="row row-cols-1 row-cols-md-2">
                 {% for post in posts %}
                     <div class="col md-4 my-2 custom-hover">
-                        <a href="{{ post.url }}" class="btn h-100">
+                        <a href="{{ post.url }}" class="btn">
                             <div class="card mb-2 shadow-sm">
                                 {% set image = post.previewImage.one() %}
-                                {% set altImage = '' %}
                                 {% if image %}
                                     {% set options = {
                                         mode: 'crop',
                                         height: 300,
                                         width: 500
                                     } %}
-                                    <img src="{{ image.getUrl(options) }}" alt="" class="img-fluid">
+                                    <img src="{{ image.getUrl(options) }}" alt="" class="img-fluid" style="max-width: 100%; height: auto">
                                  {% else %}
                                      <img src="https://via.placeholder.com/" alt="">
                                 {% endif %}
                                 <div class="card-body">
                                     <h4 class="text-uppercase text-center font-weight-light mt-2">{{ post.title }}</h4>
                                     <p class="card-text text-secondary py-2 mx-4">{{ post.description }}.</p>
-    {#                                <div class="">#}
-    {#                                    <a href="{{ post.url }}" class="btn btn-lg btn-block">#}
-    {#                                        <button type="button" class="btn btn-info btn-lg mt-2 px-5">#}
-    {#                                            See Post!#}
-    {#                                        </button>#}
-    {#                                    </a>#}
-    {#                                </div>#}
                                 </div>
                             </div>
                         </a>

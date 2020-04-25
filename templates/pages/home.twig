@@ -8,8 +8,8 @@
       {% if image %}
         {% set options = {
           mode: 'crop',
-          height: 550,
-          width: 1100,
+          height: 675,
+          width: 1200,
         } %}
         <img src="{{ image.getUrl(options) }}" alt="" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
       {% else %}
@@ -27,7 +27,7 @@
           <h2 class="featurette-heading">{{ latestPost.title }}! <span class="text-muted">{{ latestPost.description }}.</span></h2>
           <p class="lead">{{ latestPost.richText|striptags|slice(0,150) }}...</p>
           <a href="{{ latestPost.url }}">
-            <button type="button" class="btn btn-info btn-lg mt-3">
+            <button type="button" class="btn btn-info btn-lg my-3">
               Read More
             </button>
           </a>
@@ -53,7 +53,7 @@
           <h2 class="featurette-heading">{{ first.title }}! <span class="text-muted">{{ first.description }}.</span></h2>
           <p class="lead">{{ first.richText|striptags|slice(0,150) }}...</p>
           <a href="{{ first.url }}">
-            <button type="button" class="btn btn-info btn-lg mt-3">
+            <button type="button" class="btn btn-info btn-lg my-3">
               Read More
             </button>
           </a>

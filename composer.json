@@ -1,12 +1,13 @@
 {
   "require": {
-    "codemonauts/craft-instagram-feed": "^1.0",
-    "craftcms/cms": "3.4.11",
+    "codemonauts/craft-instagram-feed": "1.0.5",
+    "craftcms/cms": "3.4.17.1",
     "craftcms/contact-form": "2.2.6",
     "craftcms/contact-form-honeypot": "1.0.2",
     "craftcms/redactor": "2.6.1",
+    "ether/seo": "3.6.4",
     "misterbk/mix": "1.5.2",
-    "sebastianlenz/linkfield": "1.0.20",
+    "sebastianlenz/linkfield": "1.0.21",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

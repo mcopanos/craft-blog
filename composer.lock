@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aedc77e0f3a210464b168167d50e755f",
+    "content-hash": "4d7cc5926da2640a5d8434f3bc91235a",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -2753,6 +2753,52 @@
             "time": "2019-12-06T14:19:43+00:00"
         },
         {
+            "name": "putyourlightson/craft-sendgrid",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/putyourlightson/craft-sendgrid/zipball/5a7b4e12e5d1104296b5a63fb064c865cbea1d62",
+                "reference": "5a7b4e12e5d1104296b5a63fb064c865cbea1d62",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0",
+                "sendgrid/sendgrid": "^7.3.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "SendGrid",
+                "handle": "sendgrid",
+                "developer": "PutYourLightsOn",
+                "developerUrl": "https://putyourlightson.com/",
+                "schemaVersion": "1.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-sendgrid/v1/CHANGELOG.md",
+                "class": "putyourlightson\\sendgrid\\Sendgrid"
+            },
+            "autoload": {
+                "psr-4": {
+                    "putyourlightson\\sendgrid\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "SendGrid mailer adapter for Craft CMS.",
+            "homepage": "https://github.com/putyourlightson/craft-sendgrid",
+            "keywords": [
+                "cms",
+                "craft",
+                "craftcms",
+                "email"
+            ],
+            "support": {
+                "docs": "https://putyourlightson.com/plugins/sendgrid",
+                "source": "https://github.com/putyourlightson/craft-sendgrid",
+                "issues": "https://github.com/putyourlightson/craft-sendgrid/issues"
+            },
+            "time": "2019-10-15T10:04:34+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "dist": {
@@ -2938,6 +2984,95 @@
                 "phar"
             ],
             "time": "2020-02-14T15:25:33+00:00"
+        },
+        {
+            "name": "sendgrid/php-http-client",
+            "version": "3.10.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/php-http-client/zipball/1c97ab5475b0aa98032ea3f89d7f12453469fc08",
+                "reference": "1c97ab5475b0aa98032ea3f89d7f12453469fc08",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\": "lib/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Bernier",
+                    "email": "mbernier@twilio.com"
+                },
+                {
+                    "name": "Elmer Thomas",
+                    "email": "ethomas@twilio.com"
+                }
+            ],
+            "description": "HTTP REST client, simplified for PHP",
+            "homepage": "http://github.com/sendgrid/php-http-client",
+            "keywords": [
+                "api",
+                "fluent",
+                "http",
+                "rest",
+                "sendgrid"
+            ],
+            "time": "2020-04-29T19:42:26+00:00"
+        },
+        {
+            "name": "sendgrid/sendgrid",
+            "version": "7.5.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/efdd358557f7b51c339dbca049e46e8855cdb9ca",
+                "reference": "efdd358557f7b51c339dbca049e46e8855cdb9ca",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": ">=5.6",
+                "sendgrid/php-http-client": "~3.10"
+            },
+            "replace": {
+                "sendgrid/sendgrid-php": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\Mail\\": "lib/mail/",
+                    "SendGrid\\Contacts\\": "lib/contacts/",
+                    "SendGrid\\Stats\\": "lib/stats/"
+                },
+                "files": [
+                    "lib/BaseInterface.php",
+                    "lib/SendGrid.php",
+                    "lib/TwilioEmail.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "This library allows you to quickly and easily send emails through Twilio SendGrid using PHP.",
+            "homepage": "http://github.com/sendgrid/sendgrid-php",
+            "keywords": [
+                "email",
+                "grid",
+                "send",
+                "sendgrid",
+                "twilio sendgrid"
+            ],
+            "time": "2020-04-29T20:22:56+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

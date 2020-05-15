@@ -6,12 +6,9 @@
     "craftcms/contact-form-honeypot": "1.0.2",
     "craftcms/redactor": "2.6.1",
     "ether/seo": "3.6.4",
-<<<<<<< HEAD
+
     "fortrabbit/craft-copy": "1.0.0-RC10",
-||||||| merged common ancestors
-=======
-    "fortrabbit/craft-copy": "1.0.0-RC11",
->>>>>>> dev
+
     "misterbk/mix": "1.5.2",
     "putyourlightson/craft-sendgrid": "1.2.0",
     "sebastianlenz/linkfield": "1.0.21",

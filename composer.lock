@@ -4,13 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-//<<<<<<< HEAD
+
     "content-hash": "4d7cc5926da2640a5d8434f3bc91235a",
-//||||||| merged common ancestors
-//    "content-hash": "0443f43bd85a7190b5137ed10bdedb8d",
-//=======
-//    "content-hash": "f699c090f905f4ac9d65c1c4a5efb3de",
-//>>>>>>> dev
+
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -378,7 +374,7 @@
             "time": "2020-02-14T07:44:31+00:00"
         },
         {
-<<<<<<< HEAD
+
             "name": "cpliakas/git-wrapper",
             "version": "v2.2.0",
             "dist": {
@@ -423,54 +419,7 @@
             "time": "2019-04-28T22:31:09+00:00"
         },
         {
-||||||| merged common ancestors
-=======
-            "name": "cpliakas/git-wrapper",
-            "version": "v3.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/d118ce6a31ff09ae830872ebe9f60eef79c770a3",
-                "reference": "d118ce6a31ff09ae830872ebe9f60eef79c770a3",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^3.0",
-                "php": "^7.2",
-                "symfony/event-dispatcher": "^4.4|^5.0",
-                "symfony/process": "^4.4|^5.0"
-            },
-            "suggest": {
-                "monolog/monolog": "Enables logging of executed git commands"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GitWrapper\\": "src"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Pliakas",
-                    "email": "opensource@chrispliakas.com"
-                },
-                {
-                    "name": "Tomas Votruba",
-                    "email": "tomas.vot@gmail.com"
-                }
-            ],
-            "description": "A PHP wrapper around the Git command line utility.",
-            "keywords": [
-                "cli",
-                "git",
-                "git wrapper"
-            ],
-            "time": "2020-02-04T08:42:22+00:00"
-        },
-        {
->>>>>>> dev
+
             "name": "craftcms/cms",
             "version": "3.4.19.1",
             "dist": {
@@ -1211,107 +1160,7 @@
             "time": "2020-02-19T14:09:13+00:00"
         },
         {
-||||||| merged common ancestors
-=======
-            "name": "fortrabbit/craft-auto-migrate",
-            "version": "2.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fortrabbit/craft-auto-migrate/zipball/1051daf1e7bee3793d66639b925922fd8dc1e786",
-                "reference": "1051daf1e7bee3793d66639b925922fd8dc1e786",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "fortrabbit\\CraftAutoMigrate\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "fortrabbit\\CraftAutoMigrate\\": "src"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Stark",
-                    "homepage": "https://www.fortrabbit.com/"
-                }
-            ],
-            "description": "Runs migrations automatically",
-            "keywords": [
-                "composer",
-                "craftcms",
-                "development"
-            ],
-            "time": "2019-09-27T11:53:16+00:00"
-        },
-        {
-            "name": "fortrabbit/craft-copy",
-            "version": "1.0.0-RC11",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fortrabbit/craft-copy/zipball/c793549c023b98dc4af067c4bded055dff345896",
-                "reference": "c793549c023b98dc4af067c4bded055dff345896",
-                "shasum": ""
-            },
-            "require": {
-                "albertofem/rsync-lib": "^1.0.0",
-                "cpliakas/git-wrapper": "^3.0",
-                "craftcms/cms": "^3.4.0",
-                "fortrabbit/craft-auto-migrate": "^2.0",
-                "ostark/yii2-artisan-bridge": "^1.2.0",
-                "php": "^7.2.0",
-                "symfony/process": "^4.2 | ^5.0",
-                "symfony/yaml": "^4.2 | ^5.0",
-                "vlucas/phpdotenv": "^2.5.1 | ^3.4.0"
-            },
-            "bin": [
-                "bin/craft-copy-import-db.php",
-                "bin/craft-copy-env.php"
-            ],
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Copy",
-                "handle": "copy",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/fortrabbit/craft-copy/master/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "fortrabbit\\Copy\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Stark",
-                    "homepage": "https://www.fortrabbit.com/"
-                }
-            ],
-            "description": "Tooling for Craft on fortrabbit",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "queue"
-            ],
-            "support": {
-                "docs": "https://github.com/fortrabbit/craft-copy/blob/master/README.md",
-                "issues": "https://github.com/fortrabbit/craft-deploy-tools/issues"
-            },
-            "time": "2020-05-13T10:57:24+00:00"
-        },
-        {
->>>>>>> dev
+
             "name": "guzzlehttp/guzzle",
             "version": "6.5.3",
             "dist": {
@@ -3386,11 +3235,11 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-<<<<<<< HEAD
+
             "description": "Symfony EventDispatcher Component",
-||||||| merged common ancestors
+
             "description": "Symfony Debug Component",
-=======
+
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
             "time": "2020-03-27T16:54:36+00:00"
@@ -3436,9 +3285,8 @@
                 }
             ],
             "description": "Generic abstractions related to dispatching event",
->>>>>>> dev
+
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
             "time": "2020-03-27T16:54:36+00:00"
         },
         {
@@ -3492,20 +3340,8 @@
                 "standards"
             ],
             "time": "2019-09-17T09:54:03+00:00"
-||||||| merged common ancestors
-            "time": "2017-07-28T15:27:31+00:00"
-=======
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2019-09-17T09:54:03+00:00"
->>>>>>> dev
         },
+
         {
             "name": "symfony/filesystem",
             "version": "v4.4.8",

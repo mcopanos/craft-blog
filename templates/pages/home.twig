@@ -23,33 +23,33 @@
     {% set myEntry = date('2020-03-26') %}
     {% set latestPost = craft.entries.section('blogPosts').after(myEntry).all() %}
       <hr class="featurette-divider">
-{#      {% if latestPost > 1 %}#}
-{#        <div class="row featurette">#}
-{#          <div class="col-md-7">#}
-{#            <h2 class="featurette-heading">{{ latestPost.title }}! <span class="text-muted">{{ latestPost.description }}.</span></h2>#}
-{#            <p class="lead">{{ latestPost.richText|striptags|slice(0,150) }}...</p>#}
-{#            <a href="{{ latestPost.url }}">#}
-{#              <button type="button" class="btn btn-info btn-lg my-3">#}
-{#                Read More#}
-{#              </button>#}
-{#            </a>#}
-{#          </div>#}
-{#          <div class="col-md-5">#}
-{#            {% set image = latestPost.previewImage.one() %}#}
-{#            {% if image %}#}
-{#              {% set options = {#}
-{#                mode: 'crop',#}
-{#                height: 500,#}
-{#                width: 500#}
-{#              } %}#}
-{#              <img src="{{ image.getUrl(options) }}" alt="{{ image.altText }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto">#}
-{#            {% else %}#}
-{#              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
-{#            {% endif %}#}
-{#          </div>#}
-{#        </div>#}
-{#        <hr class="featurette-divider">#}
-{#      {% endif %}#}
+      {% if latestPost > 1 %}
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">{{ latestPost.title }}! <span class="text-muted">{{ latestPost.description }}.</span></h2>
+            <p class="lead">{{ latestPost.richText|striptags|slice(0,150) }}...</p>
+            <a href="{{ latestPost.url }}">
+              <button type="button" class="btn btn-info btn-lg my-3">
+                Read More
+              </button>
+            </a>
+          </div>
+          <div class="col-md-5">
+            {% set image = latestPost.previewImage.one() %}
+            {% if image %}
+              {% set options = {
+                mode: 'crop',
+                height: 500,
+                width: 500
+              } %}
+              <img src="{{ image.getUrl(options) }}" alt="{{ image.altText }}" class="card-img-top img-fluid" style="max-width: 100%; height: auto">
+            {% else %}
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="featurette-divider">
+      {% endif %}
 
       {% set first = craft.entries.section('blogPosts').inReverse().one() %}
       <div class="row featurette">

@@ -16,7 +16,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container row">
-        <a class="navbar-brand col-8 ml-2 logo" href="/">{{ currentSite.name }}</a>
+        <a class="navbar-brand col-4 ml-2 logo" href="/">{{ currentSite.name }}</a>
         <button id="js-mobile-nav"
                 class="navbar-toggler ml-auto "
                 type="button"
@@ -27,7 +27,7 @@
                 aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse col-4 justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse col-8 justify-content-end ml-4" id="navbarNav">
           <ul class="navbar-nav js-nav">
             {% for linkItem in navigation.linkGroup.all() %}
               <li class="px-3 nav-item ">
